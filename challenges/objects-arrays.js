@@ -114,7 +114,7 @@ const zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_
 The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-let animalsArr = [];
+const animalsArr = [];
 
 zooAnimals.forEach(animal => {
 	animalsArr.push(`Name: ${animal.animal_name}, Scientific: ${animal.scientific_name}`)
@@ -128,7 +128,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-let lowerCase = zooAnimals.map(animal => animal.animal_name.toLowerCase());
+const lowerCase = zooAnimals.map(animal => animal.animal_name.toLowerCase());
 
 console.log(lowerCase);
 
