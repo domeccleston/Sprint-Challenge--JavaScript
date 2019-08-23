@@ -50,9 +50,9 @@ Edit this document to include your answers after each question. Make sure to lea
 
     Explicit binding: when call() or apply() are used, 'this' is explicitly defined.
 
-
-
 5. Why do we need super() in an extended class?
+
+    To access and clal properties on the parent class.
 
 ## Project Set up
 
