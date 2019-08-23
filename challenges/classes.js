@@ -28,22 +28,37 @@ class CuboidMaker {
     console.log(cuboid.surfaceArea()); // 130
 
     let cubeNum = num => num * num * num;
+    let validateCube = (height, width, length) => { return (height === width && width == length) }
   
   class CubeMaker extends CuboidMaker {
       constructor(length, width, height) {
           super(length, width, height);
+          this.validCube = validateCube(this.height, this.width, this.length);
       }
       volume() {
-          return `volume: ${cubeNum(this.height)}`
+          if (this.validCube) {
+            return `volume: ${cubeNum(this.height)}`
+          }
+          else {
+            return `cube parameters must be equal`;
+        }
       }
       surfaceArea() {
-          return `surface area: ${6 * (this.height * this.height)}`
+          if (this.validCube) {
+            return `surface area: ${6 * (this.height * this.height)}`
+          }
+          else {
+              return `cube parameters must be equal`;
+          }
       }
 
   }
 
 let cube = new CubeMaker(4, 4, 4)
+let notCube = new CubeMaker(5, 4, 3)
 
 console.log(cube.height)
 console.log(cube.volume())
 console.log(cube.surfaceArea())
+console.log(cube.validCube);
+console.log(notCube.volume());
